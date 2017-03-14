@@ -53,7 +53,7 @@ set(SOURCE_FILES
 
 if (WIN32)
   set(SOURCE_FILES ${SOURCE_FILES} nfd_win.cpp)
-elseif (MACOS)
+elseif (APPLE)
   set(SOURCE_FILES ${SOURCE_FILES} nfd_cocoa.m)
   set_source_files_properties(${SOURCE_FILES} PROPERTIES COMPILE_FLAGS "-x objective-c")
 endif()
