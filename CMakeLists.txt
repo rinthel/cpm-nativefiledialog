@@ -52,9 +52,9 @@ set(SOURCE_FILES
   ${NFD_DIR}/src/nfd_common.h)
 
 if (WIN32)
-  set(SOURCE_FILES ${SOURCE_FILES} nfd_win.cpp)
+  set(SOURCE_FILES ${SOURCE_FILES} ${NFD_DIR}/src/nfd_win.cpp)
 elseif (APPLE)
-  set(SOURCE_FILES ${SOURCE_FILES} nfd_cocoa.m)
+  set(SOURCE_FILES ${SOURCE_FILES} ${NFD_DIR}/src/nfd_cocoa.m)
   set_source_files_properties(${SOURCE_FILES} PROPERTIES COMPILE_FLAGS "-x objective-c")
 endif()
 
